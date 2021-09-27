@@ -15,4 +15,3 @@ Click Login
 verify message
     Element Should Contain  ${LoginFailedMessage}    ${Message}
 test aymen
-     Element Should Contain  ${LoginFailedMessage}    ${Message}
