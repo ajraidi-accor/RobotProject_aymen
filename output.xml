@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on darwin)" generated="20210927 21:56:18.761" rpa="false" schemaversion="2">
+<suite id="s1" name="Test1" source="/Users/macbook/Documents/RobotFramework/PageObjectModel/Tests/Test1.robot">
+<kw name="Opening Browser" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210927 21:56:19.776" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20210927 21:56:19.775" endtime="20210927 21:56:23.893"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LoginUsernameInputBox}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210927 21:56:23.893" endtime="20210927 21:56:23.918"/>
+</kw>
+<status status="PASS" starttime="20210927 21:56:19.775" endtime="20210927 21:56:23.919"/>
+</kw>
+<test id="s1-t1" name="Verify Login to OrangeHRM Admin admin123">
+<kw name="Verify Login to OrangeHRM">
+<arg>Admin</arg>
+<arg>admin123</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LoginUsernameInputBox}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210927 21:56:23.922" level="INFO">Typing text 'Admin' into text field 'id:txtUsername'.</msg>
+<status status="PASS" starttime="20210927 21:56:23.922" endtime="20210927 21:56:24.014"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${LoginPasswordInputBox}</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20210927 21:56:24.015" level="INFO">Typing password into text field 'id:txtPassword'.</msg>
+<msg timestamp="20210927 21:56:24.049" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210927 21:56:24.083" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210927 21:56:24.014" endtime="20210927 21:56:24.083"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LoginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210927 21:56:24.084" level="INFO">Clicking element 'id:btnLogin'.</msg>
+<status status="PASS" starttime="20210927 21:56:24.083" endtime="20210927 21:56:26.436"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WelcomeText}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210927 21:56:26.436" endtime="20210927 21:56:26.456"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${WelcomeText}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210927 21:56:26.457" level="INFO">Clicking element 'id:welcome'.</msg>
+<status status="PASS" starttime="20210927 21:56:26.456" endtime="20210927 21:56:26.492"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WelcomeMenu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210927 21:56:26.492" endtime="20210927 21:56:26.509"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${WelcomeMenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210927 21:56:26.509" level="INFO">Clicking element 'id:welcome-menu'.</msg>
+<status status="PASS" starttime="20210927 21:56:26.509" endtime="20210927 21:56:26.543"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LogoutPassword}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210927 21:56:26.544" level="INFO">Clicking element 'css:[href='/index.php/auth/logout']'.</msg>
+<status status="PASS" starttime="20210927 21:56:26.543" endtime="20210927 21:56:27.059"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>6S</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210927 21:56:33.060" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20210927 21:56:27.059" endtime="20210927 21:56:33.060"/>
+</kw>
+<status status="PASS" starttime="20210927 21:56:23.921" endtime="20210927 21:56:33.060"/>
+</kw>
+<status status="PASS" starttime="20210927 21:56:23.919" endtime="20210927 21:56:33.061"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210927 21:56:33.062" endtime="20210927 21:56:33.148"/>
+</kw>
+<status status="PASS" starttime="20210927 21:56:18.763" endtime="20210927 21:56:33.148"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test1">Test1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
